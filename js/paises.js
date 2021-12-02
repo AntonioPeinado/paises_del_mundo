@@ -6,6 +6,8 @@ const continentes = [
   { value: "oceania", texto: "Oceania" },
 ];
 
+
+
 const cargaPaisesDeContinente = async (value) => {
   let url = `https://restcountries.com/v3.1/region/${value}`;
   let paises = await cargaDatos(url);
@@ -96,14 +98,17 @@ const cargaPais = async (nombrePais) => {
   div.appendChild(a);
 };
 
+let general = document.querySelector("#general")
+let band = document.querySelector("#band")
+let geogra = document.querySelector("#geogra")
+let tecni = document.querySelector("#tecni")
 
 let imagenes = document.querySelector("#banderas")
 let generales = document.querySelector("#capitales")
 let geograficos = document.querySelector("#geografia")
 let tecnico = document.querySelector("#tecnico")
 
-
-const visualizarBanderas = () => {
+ band.addEventListener("click", () => {
 
   tecnico.classList.remove("visible")
   tecnico.classList.add("invisible")
@@ -114,9 +119,10 @@ const visualizarBanderas = () => {
   geograficos.classList.add("invisible")
   geograficos.classList.remove("visible")
 
-};
+});
 
-const visualizarGenerales = () => {
+
+general.addEventListener("click", () => {
 
   tecnico.classList.remove("visible")
   tecnico.classList.add("invisible")
@@ -127,9 +133,9 @@ const visualizarGenerales = () => {
   geograficos.classList.add("invisible")
   geograficos.classList.remove("visible")
 
-};
+});
 
-const visualizarGeografia = () => {
+geogra.addEventListener("click", () => {
 
   tecnico.classList.remove("visible")
   tecnico.classList.add("invisible")
@@ -140,9 +146,9 @@ const visualizarGeografia = () => {
   geograficos.classList.add("visible")
   geograficos.classList.remove("invisible")
 
-};
+});
 
-const visualizarTecnicos = () => {
+tecni.addEventListener("click", () => {
 
   tecnico.classList.remove("invisible")
   tecnico.classList.add("visible")
@@ -153,5 +159,5 @@ const visualizarTecnicos = () => {
   geograficos.classList.add("invisible")
   geograficos.classList.remove("visible")
 
-};
+});
 
