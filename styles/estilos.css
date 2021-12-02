@@ -43,51 +43,7 @@ img {
     width: 360px;
     height: 360px;
 }
-/*
-.imagenes_none {
-    display: none;
-}
 
-.imagenes {
-    font-size: larger;
-    font-family: fantasy;
-    color: steelblue;
-    margin-left: 12rem;
-}
-
-.generales_none {
-    display: none;
-}
-
-.generales {
-    font-size: larger;
-    font-family: fantasy;
-    color: steelblue;
-    margin-left: 12rem;
-}
-
-.geograficos_none {
-    display: none;
-}
-
-.geograficos {
-    font-size: larger;
-    font-family: fantasy;
-    color: steelblue;
-    margin-left: 12rem;
-}
-
-.tecnicos_none {
-    display: none;
-}
-
-.tecnicos {
-    font-size: larger;
-    font-family: fantasy;
-    color: steelblue;
-    margin-left: 12rem;
-}
-*/
 .nav-link:active {
     background-color: black;
     width: 10rem;
