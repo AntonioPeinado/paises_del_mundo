@@ -115,7 +115,7 @@ const visualizarBanderas = () => {
   geograficos.classList.remove("visible")
 
 
-  
+
 
 };
 
@@ -130,7 +130,7 @@ const visualizarGenerales = () => {
   geograficos.classList.remove("visible")
 
 
- 
+
 };
 
 const visualizarGeografia = () => {
@@ -143,7 +143,7 @@ const visualizarGeografia = () => {
   geograficos.classList.add("visible")
   geograficos.classList.remove("invisible")
 
- 
+
 };
 
 const visualizarTecnicos = () => {
@@ -157,6 +157,6 @@ const visualizarTecnicos = () => {
   geograficos.classList.remove("visible")
 
 
-  
+
 };
 
