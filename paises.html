@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/png" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    <link rel="stylesheet" href="./styles/estilos.css" />
+    <script src="./js/paises.js" defer></script>
+    <title>Paises del mundo</title>
+  </head>
+
+  <body onload="cargaSelectContinentes()">
+    <div class="container">
+      <header>
+        <nav class="navbar navbar-dark bg-primary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Países del Mundo </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarText"
+              aria-controls="navbarText"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link navbar-toggler"
+                    aria-current="page"
+                    href="#"
+                    onclick="visualizarGenerales()"
+                    >Generales</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link navbar-toggler"
+                    aria-current="page"
+                    href="#"
+                    onclick="visualizarGeografia()"
+                    >Geograficos</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link navbar-toggler"
+                    aria-current="page"
+                    href="#"
+                    onclick="visualizarTecnicos()"
+                    >Técnico</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link navbar-toggler"
+                    aria-current="page"
+                    href="#"
+                    onclick="visualizarBanderas()"
+                    >Bandera</a
+                  >
+                </li>
+                <li>
+                  <div
+                    class="nav-link navbar-toggler"
+                    id="enlace"
+                    src=" mapa"
+                  ></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div class="seleccion">
+        <span>continentes:&nbsp;&nbsp;</span
+        ><select
+          id="continentes"
+          onchange="cargaPaisesDeContinente(this.value)"
+        >
+          <option value="0">Selecciona continente...</option>
+        </select>
+
+        <span>paises:&nbsp;&nbsp;</span
+        ><select id="paises" onchange="cargaPais(this.value)">
+          <option value="0">Selecciona pais...</option>
+        </select>
+      </div>
+
+      <div class="invisible" id="banderas">
+        <img id="bandera" />
+        <img id="escudo" />
+      </div>
+
+      <div class="invisible" id="capitales">
+        <p>Datos generales</p>
+        <div id="name-pais">
+          <span>Nombre País:&nbsp;&nbsp;</span>
+          <posicion-menu />
+        </div>
+        <div id="capital">
+          <span>Nombre de la capital:&nbsp;&nbsp;</span>
+          <posicion-capital />
+        </div>
+        <div id="poblacion">
+          <span>Población:&nbsp;&nbsp;</span>
+          <posicion-poblacion />
+        </div>
+        <div id="capit">
+          <span>Lenguaje:&nbsp;&nbsp;</span>
+          <posicion-lenguaje />
+        </div>
+
+        <div id="posicion-moneda">
+          <span>Moneda:&nbsp;&nbsp;</span>
+          <posicion-moneda />
+        </div>
+        <div id="posicion-symbol">
+          <span>Símbolo:&nbsp;&nbsp;</span>
+          <posicion-symbol />
+        </div>
+      </div>
+
+      <div class="invisible" id="geografia">
+        <div id="posicion-geograficos"><p>Datos geográficos</p></div>
+
+        <div id="posicion">
+          <span>Latitud:&nbsp;&nbsp;</span>
+          <posicion-position />
+        </div>
+
+        <div id="posicionlong">
+          <span>Longitud:&nbsp;&nbsp;</span>
+          <posicion-positionlong />
+        </div>
+
+        <span>Fronteras:&nbsp;&nbsp;</span> <posicion-geograficos />
+      </div>
+
+      <div class="invisible" id="tecnico">
+        <div id="posicion-tecnicos"><p>Datos tecnicos</p></div>
+        <div>
+          <span> Área del país:&nbsp;&nbsp;</span> <posicion-tecnicos />
+        </div>
+
+        <div>
+          <span>Zonas horarias:&nbsp;&nbsp;</span> <posicion-tecnicoszona />
+        </div>
+        <div><span>Mapa del país:&nbsp;&nbsp;</span><posicion-map /></div>
+      </div>
+    </div>
+  </body>
+</html>

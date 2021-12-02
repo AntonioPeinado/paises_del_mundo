@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+    background-color: aliceblue;
+}
+
+#bandera{
+    margin-right: 12rem;
+    width: 350px;
+    height: 250px;
+}
+#escudo{
+    width: 150px;
+    height: 150px;
+    
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+
+}
+
+.seleccion {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    margin: 6rem 6rem;
+    
+
+}
+
+#continentes {
+    display: flex;
+    margin-right: 12rem;
+    
+}
+
+img {
+    width: 360px;
+    height: 360px;
+}
+/*
+.imagenes_none {
+    display: none;
+}
+
+.imagenes {
+    font-size: larger;
+    font-family: fantasy;
+    color: steelblue;
+    margin-left: 12rem;
+}
+
+.generales_none {
+    display: none;
+}
+
+.generales {
+    font-size: larger;
+    font-family: fantasy;
+    color: steelblue;
+    margin-left: 12rem;
+}
+
+.geograficos_none {
+    display: none;
+}
+
+.geograficos {
+    font-size: larger;
+    font-family: fantasy;
+    color: steelblue;
+    margin-left: 12rem;
+}
+
+.tecnicos_none {
+    display: none;
+}
+
+.tecnicos {
+    font-size: larger;
+    font-family: fantasy;
+    color: steelblue;
+    margin-left: 12rem;
+}
+*/
+.nav-link:active {
+    background-color: black;
+    width: 10rem;
+}
+
+.nav-link {
+    width: 10rem;
+    
+}
+
+p {
+    color: brown;
+    font-size: x-large;
+    font-family: fantasy;
+}
+
+span {
+    color: rgb(3, 40, 250);
+    font-size: x-large;
+    font-family: fantasy;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+}
+
+.visible {
+    font-size: larger;
+    font-family: fantasy;
+    color: steelblue;
+    margin-left: 12rem;
+}
+
+.invisible {
+    display: none;
+}
