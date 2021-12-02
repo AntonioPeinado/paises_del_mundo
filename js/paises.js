@@ -48,14 +48,14 @@ const cargaPais = async (nombrePais) => {
   let pais = await cargaDatos(url);
   let bandera = document.querySelector("#bandera");
   let escudo = document.querySelector("#escudo");
-  let mapa = document.querySelector("#mapa")
+  let mapa = document.querySelector("#mapa");
 
   document.querySelector("posicion-menu").innerHTML = pais[0].name.common;
   document.querySelector("posicion-capital").innerHTML = pais[0].capital;
-  document.querySelector("posicion-poblacion").innerHTML = parseFloat(pais[0].population).toLocaleString("es")
+  document.querySelector("posicion-poblacion").innerHTML = parseFloat(pais[0].population).toLocaleString("es");
   document.querySelector("posicion-position").innerHTML = pais[0].latlng[0];
   document.querySelector("posicion-positionlong").innerHTML = pais[0].latlng[1];
-  document.querySelector("posicion-tecnicos").innerHTML = parseFloat(pais[0].area).toLocaleString("es")
+  document.querySelector("posicion-tecnicos").innerHTML = parseFloat(pais[0].area).toLocaleString("es");
   document.querySelector("posicion-tecnicoszona").innerHTML = pais[0].timezones;
   mapa = document.querySelector("posicion-map").innerHTML = pais[0].maps.googleMaps;
 
@@ -66,7 +66,7 @@ const cargaPais = async (nombrePais) => {
     document.querySelector("posicion-geograficos").innerHTML = pais[0].borders;
   } else {
     document.querySelector("posicion-geograficos").innerHTML = "No tiene fronteras";
-  }
+  };
 
   let lenguaje = Object.values(pais[0].languages);
   lenguaje.forEach(prop => {
@@ -80,7 +80,7 @@ const cargaPais = async (nombrePais) => {
       document.querySelector("posicion-symbol").innerHTML = prop.symbol;
     } else {
       document.querySelector("posicion-symbol").innerHTML = "No dispone de símbolo";
-    }
+    };
 
 
   });
@@ -98,66 +98,66 @@ const cargaPais = async (nombrePais) => {
   div.appendChild(a);
 };
 
-let general = document.querySelector("#general")
-let band = document.querySelector("#band")
-let geogra = document.querySelector("#geogra")
-let tecni = document.querySelector("#tecni")
+let general = document.querySelector("#general");
+let band = document.querySelector("#band");
+let geogra = document.querySelector("#geogra");
+let tecni = document.querySelector("#tecni");
 
-let imagenes = document.querySelector("#banderas")
-let generales = document.querySelector("#capitales")
-let geograficos = document.querySelector("#geografia")
-let tecnico = document.querySelector("#tecnico")
+let imagenes = document.querySelector("#banderas");
+let generales = document.querySelector("#capitales");
+let geograficos = document.querySelector("#geografia");
+let tecnico = document.querySelector("#tecnico");
 
- band.addEventListener("click", () => {
+band.addEventListener("click", () => {
 
-  tecnico.classList.remove("visible")
-  tecnico.classList.add("invisible")
-  imagenes.classList.add("visible")
-  imagenes.classList.remove("invisible")
-  generales.classList.add("invisible")
-  generales.classList.remove("visible")
-  geograficos.classList.add("invisible")
-  geograficos.classList.remove("visible")
+  tecnico.classList.remove("visible");
+  tecnico.classList.add("invisible");
+  imagenes.classList.add("visible");
+  imagenes.classList.remove("invisible");
+  generales.classList.add("invisible");
+  generales.classList.remove("visible");
+  geograficos.classList.add("invisible");
+  geograficos.classList.remove("visible");
 
 });
 
 
 general.addEventListener("click", () => {
 
-  tecnico.classList.remove("visible")
-  tecnico.classList.add("invisible")
-  imagenes.classList.add("invisible")
-  imagenes.classList.remove("visible")
-  generales.classList.add("visible")
-  generales.classList.remove("invisible")
-  geograficos.classList.add("invisible")
-  geograficos.classList.remove("visible")
+  tecnico.classList.remove("visible");
+  tecnico.classList.add("invisible");
+  imagenes.classList.add("invisible");
+  imagenes.classList.remove("visible");
+  generales.classList.add("visible");
+  generales.classList.remove("invisible");
+  geograficos.classList.add("invisible");
+  geograficos.classList.remove("visible");
 
 });
 
 geogra.addEventListener("click", () => {
 
-  tecnico.classList.remove("visible")
-  tecnico.classList.add("invisible")
-  imagenes.classList.add("invisible")
-  imagenes.classList.remove("visible")
-  generales.classList.add("invisible")
-  generales.classList.remove("visible")
-  geograficos.classList.add("visible")
-  geograficos.classList.remove("invisible")
+  tecnico.classList.remove("visible");
+  tecnico.classList.add("invisible");
+  imagenes.classList.add("invisible");
+  imagenes.classList.remove("visible");
+  generales.classList.add("invisible");
+  generales.classList.remove("visible");
+  geograficos.classList.add("visible");
+  geograficos.classList.remove("invisible");
 
 });
 
 tecni.addEventListener("click", () => {
 
-  tecnico.classList.remove("invisible")
-  tecnico.classList.add("visible")
-  imagenes.classList.add("invisible")
-  imagenes.classList.remove("visible")
-  generales.classList.add("invisible")
-  generales.classList.remove("visible")
-  geograficos.classList.add("invisible")
-  geograficos.classList.remove("visible")
+  tecnico.classList.remove("invisible");
+  tecnico.classList.add("visible");
+  imagenes.classList.add("invisible");
+  imagenes.classList.remove("visible");
+  generales.classList.add("invisible");
+  generales.classList.remove("visible");
+  geograficos.classList.add("invisible");
+  geograficos.classList.remove("visible");
 
 });
 
