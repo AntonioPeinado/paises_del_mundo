@@ -114,12 +114,10 @@ const visualizarBanderas = () => {
   geograficos.classList.add("invisible")
   geograficos.classList.remove("visible")
 
-
-
-
 };
 
 const visualizarGenerales = () => {
+
   tecnico.classList.remove("visible")
   tecnico.classList.add("invisible")
   imagenes.classList.add("invisible")
@@ -129,11 +127,10 @@ const visualizarGenerales = () => {
   geograficos.classList.add("invisible")
   geograficos.classList.remove("visible")
 
-
-
 };
 
 const visualizarGeografia = () => {
+
   tecnico.classList.remove("visible")
   tecnico.classList.add("invisible")
   imagenes.classList.add("invisible")
@@ -143,10 +140,10 @@ const visualizarGeografia = () => {
   geograficos.classList.add("visible")
   geograficos.classList.remove("invisible")
 
-
 };
 
 const visualizarTecnicos = () => {
+
   tecnico.classList.remove("invisible")
   tecnico.classList.add("visible")
   imagenes.classList.add("invisible")
@@ -155,8 +152,6 @@ const visualizarTecnicos = () => {
   generales.classList.remove("visible")
   geograficos.classList.add("invisible")
   geograficos.classList.remove("visible")
-
-
 
 };
 
