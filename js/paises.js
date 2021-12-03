@@ -104,15 +104,16 @@ const cargaPais = async (nombrePais) => {
   div.appendChild(a);
 };
 
-let general = document.querySelector("#general");
-let band = document.querySelector("#band");
-let geogra = document.querySelector("#geogra");
-let tecni = document.querySelector("#tecni");
+const general = document.querySelector("#general");
+const band = document.querySelector("#band");
+const geogra = document.querySelector("#geogra");
+const tecni = document.querySelector("#tecni");
+const salir = document.querySelector("#salir");
 
-let imagenes = document.querySelector("#banderas");
-let generales = document.querySelector("#capitales");
-let geograficos = document.querySelector("#geografia");
-let tecnico = document.querySelector("#tecnico");
+const imagenes = document.querySelector("#banderas");
+const generales = document.querySelector("#capitales");
+const geograficos = document.querySelector("#geografia");
+const tecnico = document.querySelector("#tecnico");
 
 band.addEventListener("click", () => {
 
@@ -167,4 +168,7 @@ tecni.addEventListener("click", () => {
 
 });
 
+salir.addEventListener("click",
+ () =>location.reload(true)
+);
 

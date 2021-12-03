@@ -72,6 +72,11 @@ a {
     opacity: 1;
 }
 
+
+.invisible {
+    display: none;
+}
+
 .visible {
     font-size: larger;
     font-family: fantasy;
@@ -79,10 +84,13 @@ a {
     margin-left: 12rem;
 }
 
-.invisible {
-    display: none;
-}
-
 #sinescudo {
     text-align: center;
+   
 }
+
+#salir {
+    cursor:pointer; 
+    cursor: hand
+}
+
