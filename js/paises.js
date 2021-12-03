@@ -84,15 +84,21 @@ const cargaPais = async (nombrePais) => {
 
 
   });
-
+       
+  if(pais[0].coatOfArms.png){
+    escudo.src = pais[0].coatOfArms.png;
+  }else{
+    p = document.createElement("p");
+    sinescudo = document.querySelector("#sinescudo")
+    sinescudo.appendChild(p)
+     p.innerHTML= "No dispone de escudo de armas"
+  }
+                                              
   bandera.src = pais[0].flags.png;
-  escudo.src = pais[0].coatOfArms.png;
-
-
-
+    
   let div = document.querySelector("#enlace");
   let a = document.createElement("a");
-  a.href = mapa;
+  a.href = mapa;                                                   
   a.target = "_blank";
   a.innerHTML = "Mapa";
   div.appendChild(a);
