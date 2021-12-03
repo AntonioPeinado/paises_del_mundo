@@ -58,6 +58,7 @@ const cargaPais = async (nombrePais) => {
   document.querySelector("posicion-tecnicos").innerHTML = parseFloat(pais[0].area).toLocaleString("es");
   document.querySelector("posicion-tecnicoszona").innerHTML = pais[0].timezones;
   mapa = document.querySelector("posicion-map").innerHTML = pais[0].maps.googleMaps;
+  street = document.querySelector("posicion-mapStreet").innerHTML = pais[0].maps.openStreetMaps;
 
 
 
@@ -84,24 +85,32 @@ const cargaPais = async (nombrePais) => {
 
 
   });
-       
-  if(pais[0].coatOfArms.png){
+
+  if (pais[0].coatOfArms.png) {
     escudo.src = pais[0].coatOfArms.png;
-  }else{
+  } else {
     p = document.createElement("p");
-    sinescudo = document.querySelector("#sinescudo")
-    sinescudo.appendChild(p)
-     p.innerHTML= "No dispone de escudo de armas"
+    sineScudo = document.querySelector("#sinescudo")
+    sineScudo.appendChild(p)
+    p.innerHTML = "No dispone de escudo de armas"
   }
-                                              
+
   bandera.src = pais[0].flags.png;
-    
+
   let div = document.querySelector("#enlace");
   let a = document.createElement("a");
-  a.href = mapa;                                                   
+  a.href = mapa;
   a.target = "_blank";
-  a.innerHTML = "Mapa";
+  a.innerHTML = "Google Maps";
   div.appendChild(a);
+
+
+  let st = document.querySelector("#street");
+  let open = document.createElement("a");
+  open.href = street;
+  open.target = "_blank";
+  open.innerHTML = "openStreet";
+  st.appendChild(open);
 };
 
 const general = document.querySelector("#general");
@@ -115,60 +124,61 @@ const generales = document.querySelector("#capitales");
 const geograficos = document.querySelector("#geografia");
 const tecnico = document.querySelector("#tecnico");
 
-band.addEventListener("click", () => {
+const bandera = () => {
+  imagenes.classList.remove("visible");
+  imagenes.classList.add("invisible");
+}
 
+const tecnicos = () => {
   tecnico.classList.remove("visible");
   tecnico.classList.add("invisible");
-  imagenes.classList.add("visible");
-  imagenes.classList.remove("invisible");
-  generales.classList.add("invisible");
+}
+
+const gene = () => {
   generales.classList.remove("visible");
+  generales.classList.add("invisible");
+}
+
+const geografico = () => {
   geograficos.classList.add("invisible");
   geograficos.classList.remove("visible");
+}
 
+band.addEventListener("click", () => {
+  imagenes.classList.remove("invisible");
+  imagenes.classList.add("visible");
+  gene();
+  tecnicos();
+  geografico();
 });
 
 
 general.addEventListener("click", () => {
-
-  tecnico.classList.remove("visible");
-  tecnico.classList.add("invisible");
-  imagenes.classList.add("invisible");
-  imagenes.classList.remove("visible");
   generales.classList.add("visible");
   generales.classList.remove("invisible");
-  geograficos.classList.add("invisible");
-  geograficos.classList.remove("visible");
-
+  tecnicos();
+  geografico();
+  bandera();
 });
 
 geogra.addEventListener("click", () => {
-
-  tecnico.classList.remove("visible");
-  tecnico.classList.add("invisible");
-  imagenes.classList.add("invisible");
-  imagenes.classList.remove("visible");
-  generales.classList.add("invisible");
-  generales.classList.remove("visible");
   geograficos.classList.add("visible");
   geograficos.classList.remove("invisible");
-
+  tecnicos();
+  bandera();
+  gene();
 });
 
 tecni.addEventListener("click", () => {
-
   tecnico.classList.remove("invisible");
   tecnico.classList.add("visible");
-  imagenes.classList.add("invisible");
-  imagenes.classList.remove("visible");
-  generales.classList.add("invisible");
-  generales.classList.remove("visible");
-  geograficos.classList.add("invisible");
-  geograficos.classList.remove("visible");
+  bandera();
+  gene();
+  geografico();
 
 });
 
 salir.addEventListener("click",
- () =>location.reload(true)
+  () => location.reload(true)
 );
 

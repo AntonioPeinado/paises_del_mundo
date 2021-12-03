@@ -85,6 +85,13 @@
                     src=" mapa"
                   ></div>
                 </li>
+                <li>
+                  <div
+                    class="nav-link navbar-toggler"
+                    id="street"
+                    src=" mapa"
+                  ></div>
+                </li>
 
                 <li class="nav-item">
                   
@@ -117,7 +124,7 @@
       <div class="invisible" id="banderas">
         <img id="bandera" />
         <img id="escudo" />
-        <div id="sinescudo" class="visible"></div>
+        <div id="sinescudo"></div>
       </div>
 
       <div class="invisible" id="capitales">
@@ -162,7 +169,7 @@
           <posicion-positionlong />
         </div>
 
-        <span>Fronteras:&nbsp;&nbsp;</span> <posicion-geograficos />
+        <span>Fronteras:&nbsp;&nbsp;</span> <posicion-geograficos /><br>
       </div>
 
       <div class="invisible" id="tecnico">
@@ -174,7 +181,8 @@
         <div>
           <span>Zonas horarias:&nbsp;&nbsp;</span> <posicion-tecnicoszona />
         </div>
-        <div><span>Mapa del país:&nbsp;&nbsp;</span><posicion-map /></div>
+        <div><span>Mapa de Google:&nbsp;&nbsp;</span><posicion-map /></div>
+        <div><span>Mapa de openStreet:&nbsp;&nbsp;</span><posicion-mapStreet /></div>
       </div>
     </div>
   </body>
