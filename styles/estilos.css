@@ -4,7 +4,7 @@
 }
 body{
     background-color: aliceblue;
-    
+  
 }
 
 #bandera{
@@ -29,6 +29,7 @@ body{
     height: 100%;
     box-shadow: 3px 3px 8px rgb(66, 65, 65);
     border:  white 8px outset;
+    
 }
 
 
@@ -98,9 +99,10 @@ a {
     font-size: larger;
     font-family: fantasy;
     color: steelblue;
-    margin-left: 12rem;
     box-shadow: 3px 3px 8px rgb(66, 65, 65);
     border:  white 8px outset;
+    text-align: center;
+   
 }
 
 #sinescudo {
