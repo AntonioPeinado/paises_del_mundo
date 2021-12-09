@@ -1,28 +1,36 @@
 * {
     padding: 0;
     margin: 0;
-    
 }
 body{
     background-color: aliceblue;
+    
 }
 
 #bandera{
     margin-right: 12rem;
     width: 350px;
     height: 250px;
+    box-shadow: 3px 3px 8px rgb(66, 65, 65);
+    border:  white 8px outset;
 }
+
 #escudo{
     width: 150px;
     height: 150px;
-    
+    box-shadow: 3px 3px 8px rgb(66, 65, 65);
+    border:  white 8px outset;
 }
+    
+
 
 .container {
     width: 100%;
     height: 100%;
-
+    box-shadow: 3px 3px 8px rgb(66, 65, 65);
+    border:  white 8px outset;
 }
+
 
 .seleccion {
     display: flex;
@@ -36,40 +44,49 @@ body{
 #continentes {
     display: flex;
     margin-right: 12rem;
-    
+   
 }
 
 img {
     width: 360px;
     height: 360px;
+    box-shadow: 3px 3px 8px rgb(66, 65, 65);
+    border:  white 8px outset;
 }
 
 .nav-link:active {
     background-color: black;
     width: 10rem;
+    box-shadow: 3px 3px 8px rgb(66, 65, 65);
+    border:  white 8px outset;
 }
 
 .nav-link {
     width: 10rem;
-    
+    box-shadow: 3px 3px 8px rgb(66, 65, 65);
+    border:  white 8px outset;
 }
 
 p {
     color: brown;
     font-size: x-large;
     font-family: fantasy;
+    box-shadow: 3px 3px 8px rgb(66, 65, 65);
+    border:  white 8px outset;
 }
 
 span {
     color: rgb(3, 40, 250);
     font-size: x-large;
     font-family: fantasy;
+   
 }
 
 a {
     color: white;
     text-decoration: none;
     opacity: 1;
+   
 }
 
 
@@ -82,15 +99,28 @@ a {
     font-family: fantasy;
     color: steelblue;
     margin-left: 12rem;
+    box-shadow: 3px 3px 8px rgb(66, 65, 65);
+    border:  white 8px outset;
 }
 
 #sinescudo {
     text-align: center;
-   
+    box-shadow: 3px 3px 8px rgb(66, 65, 65);
+    border:  white 8px outset;
 }
 
 #salir {
     cursor:pointer; 
-    cursor: hand
+     
+}
+
+.navbar-brand {
+    box-shadow: 3px 3px 8px rgb(66, 65, 65);
+    border:  white 8px outset;
+}
+
+header {
+    box-shadow: 3px 3px 8px rgb(66, 65, 65);
+    border:  white 8px outset;
 }
 
